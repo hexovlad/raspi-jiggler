@@ -11,20 +11,20 @@ led.direction = digitalio.Direction.OUTPUT
 
 # Define the external button pin
 button = digitalio.DigitalInOut(board.GP22)  # External button is connected to GP22
-button.direction = digitalio.Direction.INPUT
-button.pull = digitalio.Pull.UP
+button.direction = digitalio.Direction.INPUT  # Set the pin as input
+button.pull = digitalio.Pull.UP  # Enable the internal pull-up resistor
 
 # Initialize the mouse
-mouse = Mouse(usb_hid.devices)
+mouse = Mouse(usb_hid.devices)  # Create a new mouse object
 
 # Initial state of the LED
-led_state = True
-led.value = led_state
+led_state = True  # LED is initialized to ON
+led.value = led_state  # Set the LED to the initial state
 
 # Initial state of the mouse jiggler
 jiggler_active = False
 
-print(f"Initial LED status: {led_state}")
+print(f"Initial LED status: {led_state}")  # Printing the 
 print(f"Initial mouse jiggler status: {jiggler_active}")
 
 async def jiggle_mouse():
