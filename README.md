@@ -1,5 +1,6 @@
 # Mouse Jiggler with Random Movements
 ![Raspi Pico](resources/image.png)
+
 This project implements a mouse jiggler using a microcontroller with an external button and an onboard LED. The mouse jiggler simulates mouse movements to prevent the computer from going idle. The movements are random within a specified range to mimic natural mouse activity.
 
 ## Features
